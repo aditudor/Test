@@ -20,8 +20,13 @@ public class Test {
         montant = 100L;
        
         montant = Calculer(montant, true, true);
-     
-        System.out.println(montant); 
+//        System.out.println(montant); 
+        
+        int a = 452342367;
+        Dollar d = new Dollar();
+        System.out.println("Ävant: " + a);
+        System.out.println("Apres: " + d.toString(a));
+        
     }
     
     static long Calculer(long montant, boolean federal, boolean provincial){
@@ -38,5 +43,7 @@ public class Test {
         }
         return resultat;
     }
+    
+    
    
 }

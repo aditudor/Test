@@ -17,4 +17,24 @@ public class Dollar {
     public int Procent(int a, int b){
         return a = (int)((a*b) / 10000);
     }
+    
+    public String toString(int a){
+        String a$;
+        String b$ = "";
+        
+        a$ = String.valueOf(a);
+        int l = a$.length(); 
+       
+        for (int i = 0;  i < l; i++ ){
+            if ( i == (l - 2) ){
+                b$ += ".";
+                b$ += a$.charAt(i);
+            } else {
+                b$ += a$.charAt(i);
+            }
+            
+        } 
+        b$ += "$";
+        return b$;
+    }
 }
