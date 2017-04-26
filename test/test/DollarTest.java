@@ -16,23 +16,13 @@ import static org.junit.Assert.*;
  *
  * @author Adrian.Tudor
  */
-public class DollarIT {
-    
-    public DollarIT() {
+public class DollarTest {
+
+    public DollarTest() {
     }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
+
+
+
     @After
     public void tearDown() {
     }
@@ -65,7 +55,16 @@ public class DollarIT {
         int result = instance.Procent(a, b);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        
+
     }
-    
+
+    @Test
+    public void TesttoString() {
+        System.out.println("Methode toString");
+        int a = 12345;
+        String b = "123.45$";
+        Dollar instance = new Dollar();
+        assertEquals(b, instance.toString(a));
+    }
+
 }
